@@ -267,7 +267,9 @@ section #chat button {
     bottom: 75%;
     border: 1px solid black;
     background-color: white;
-    width: 23%;
+    width: 38%;
     Height: 335%;
     padding: 16px;
+    left: 1.5%;
+    font-size: 26px;
 }
