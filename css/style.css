@@ -27,11 +27,19 @@ button, strong {
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
+h1 {
+    background-color: #3F51B5;
+    color: white;
+}
+
+h1 a{
+    color: white;
+    text-decoration: none;
+}
+
 section #channels h1 {
     display: flex;
     position: absolute;
-    background-color: #3F51B5;
-    color: white;
     top: 0;
     left: 0;
     height: 49px;
@@ -44,8 +52,6 @@ section #channels h1 {
 section #chat h1 {
     display: flex;
     position: absolute;
-    background-color: #3F51B5;
-    color: white;
     top: 0;
     right: 0;
     height: 49px;
@@ -272,4 +278,5 @@ section #chat button {
     padding: 16px;
     left: 1.5%;
     font-size: 26px;
+    display: none;
 }

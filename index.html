@@ -10,6 +10,9 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- embed the java script -->
+    <script src="js/script.js"></script>
+
     
 </head>
 <body>
@@ -24,7 +27,7 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+        <li onclick="switchChannel('#Yummy')">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -33,7 +36,7 @@
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <li class="selected" onclick="switchChannel('#SevenContinents')">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
@@ -41,21 +44,21 @@
             <img src="https://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="right">
             </span>
         </li>
-        <li>#KillerApp
+        <li onclick="switchChannel('#KillerApp')">#KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
             <img src="https://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="right">
             </span>
         </li>
-        <li>#FirstPersonOnMars
+        <li onclick="switchChannel('#FirstPersonOnMars')">#FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
             <img src="https://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="right">
             </span>
         </li>
-        <li>#Octoberfest
+        <li onclick="switchChannel('#Octoberfest')">#Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <span class="channel-meta">
             <img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="not starred">
@@ -68,17 +71,17 @@
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="tab-new" onclick="selectTab('#tab-new')" class="selected">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button id="tab-trending" onclick="selectTab('#tab-trending')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+        <button id="tab-favorites" onclick="selectTab('#tab-favorites')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
             Favorites
@@ -91,12 +94,12 @@
 <section>
 <div id="chat">
     <h1>
-        #SevenContinents&nbsp;
-        <small>by
+        <span id="channel-name">#SevenContinents&nbsp;</span>
+        <small id="channel-location">by
             <strong>cheeses.yard.applies</strong>
         </small>
         <span class="channel-meta">
-        <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred">
+        <img id="channel-star" src="http://ip.lfe.mw.tum.de/sections/star.png" alt="starred" onclick="favorite()">
         </span>
     </h1>
     <div class="chat-container">
@@ -187,7 +190,7 @@
 </div>
 </div>
 <div id="chat-bar">
-        <button id="emojis-button">
+        <button id="emojis-button" onclick="emojis()">
             <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png">
         </button>
         <div id="emojis">
@@ -196,5 +199,6 @@
 </div>
 </section>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </body>
 </html>
